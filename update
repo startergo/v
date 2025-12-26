@@ -11,7 +11,7 @@ pipenv sync
 cd angle
 scripts/bootstrap.py
 gclient sync -D
-gn gen "--args=is_debug=false install_prefix=\"$PWD/../..\"" ../build/angle
+gn gen "--args=is_debug=false install_prefix=\"$PWD/..\"" ../build/angle
 cd ..
 ninja -C build/angle
 [ -e build/libepoxy/meson-info ] || meson setup "--pkg-config-path=$PWD/lib/pkgconfig" "--prefix=$PWD" -Degl=yes build/libepoxy libepoxy
