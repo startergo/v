@@ -1,6 +1,10 @@
 # SPDX-License-Identifier: 0BSD
 
 *
+!/.gitignore
+!/.gitmodules
+!/.vscode
+!/.vscode/settings.json
 !/LICENSE
 !/Pipfile
 !/Pipfile.lock
@@ -11,5 +15,3 @@
 !/qemu
 !/run
 !/virglrenderer
-!/.gitignore
-!/.gitmodules

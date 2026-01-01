@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.osx": {
+        "DEPOT_TOOLS_UPDATE": "0",
+        "PATH": "${workspaceFolder}/depot_tools:${env:PATH}"
+    }
+}
