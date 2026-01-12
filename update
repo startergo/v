@@ -15,8 +15,8 @@ gclient runhooks
 gn gen "--args=is_debug=false install_prefix=\"$PWD/..\"" ../build/angle
 cd ..
 ninja -C build/angle
-[ -e build/libepoxy/meson-info ] || meson setup -Dc_args=-D_DARWIN_C_SOURCE "--pkg-config-path=$PWD/lib/pkgconfig" "--prefix=$PWD" -Degl=yes 
-build/libepoxy libepoxy
+[ -e build/libepoxy/meson-info ] || meson setup -Dc_args=-D_DARWIN_C_SOURCE "--pkg-config-path=$PWD/lib/pkgconfig" "--prefix=$PWD" -Degl=yes build/libepoxy libepoxy
+meson install -C build/libepoxy
 [ -e build/virglrenderer/meson-info ] || pipenv run meson setup "--pkg-config-path=$PWD/lib/pkgconfig" "--prefix=$PWD" build/virglrenderer virglrenderer
 pipenv run meson install -C build/virglrenderer
 mkdir -p build/qemu
