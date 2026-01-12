@@ -11,6 +11,7 @@ pipenv sync
 cd angle
 scripts/bootstrap.py
 gclient sync -D
+gclient runhooks
 gn gen "--args=is_debug=false install_prefix=\"$PWD/..\"" ../build/angle
 cd ..
 ninja -C build/angle
